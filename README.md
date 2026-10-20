@@ -133,6 +133,10 @@ Ordre de grandeur sur un DS1621+ : 126 Mo/s de disque à disque, 31 Mo/s vers un
 - Exporter les machines virtuelles à garder (**Virtual Machine Manager → Exporter**).
 - Dissocier le NAS du compte Synology, et de QuickConnect.
 - Ne jamais remettre le disque de copie dans un Synology : DSM pourrait proposer de l'initialiser, donc de l'effacer.
+- Pas besoin de réinitialiser le NAS : il suffit de retirer tous les disques. DSM et ses réglages sont sur les
+  disques (la partition système `md0`), pas dans le NAS, et ne s'installent pas sur les NVMe M.2 ([Synology :
+  installer DSM](https://kb.synology.com/fr-fr/DSM/tutorial/How_to_install_DSM)). Sans disque, le NAS apparaît
+  « Non installé », comme neuf. La réinitialisation depuis DSM, elle, efface les disques présents.
 
 ## Licence
 

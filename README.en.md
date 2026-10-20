@@ -133,6 +133,10 @@ Ballpark on a DS1621+: 126 MB/s disk to disk, 31 MB/s to an SSD plugged in at US
 - Export the virtual machines to keep (**Virtual Machine Manager → Export**).
 - Unlink the NAS from the Synology account, and from QuickConnect.
 - Never put the copy disk back into a Synology: DSM may offer to initialize it, which erases it.
+- No need to reset the NAS: just remove all the drives. DSM and its settings live on the drives (the `md0` system
+  partition), not in the NAS, and cannot be installed on M.2 NVMe drives ([Synology: install
+  DSM](https://kb.synology.com/en-global/DSM/tutorial/How_to_install_DSM)). With no drive, the NAS shows up as
+  "Not installed", like a new one. A reset from DSM, on the other hand, erases the drives inside.
 
 ## License
 
